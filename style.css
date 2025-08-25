@@ -1,0 +1,549 @@
+/* ==================== Global ==================== */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(14, 12, 21);
+    font-family: monospace;
+    color: lightgray;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* ==================== Header ==================== */
+header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    border: 0.5px solid rgba(110, 101, 114, 0.5);
+    z-index: 999;
+}
+
+.head-left {
+    display: flex;
+    align-items: center;
+}
+
+.head-left img {
+    margin-right: 15px;
+    height: 45px;
+}
+
+header ul {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header ul li {
+    list-style-type: none;
+}
+
+header a {
+    text-decoration: none;
+    color: gray;
+    font-weight: 900;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+header a:hover {
+    color: lightgray;
+    text-shadow: 0 0 15px rgb(253, 243, 243);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+/* ==================== Button Box ==================== */
+.button-box {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    margin-left: 25px;
+    background: linear-gradient(to right, #00aaa7, #7f42a7, #6600c5, #1f2b9c, #2a46ff, #0099ff, #00aaa7);
+    border-radius: 10px;
+    background-size: 200%;
+    animation: animationGradient 2.5s linear infinite;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 35%, 100% 80%, 100% 100%, 0 100%, 0% 80%, 0 0);
+}
+
+@keyframes animationGradient {
+    to {
+        background-position: 200%;
+    }
+}
+
+.head-right button {
+    position: absolute;
+    inset: 3px;
+    border: none;
+    background-color: rgb(14, 12, 21);
+    color: lightgrey;
+    border-radius: 10px;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 35%, 100% 80%, 100% 100%, 0 100%, 0% 80%, 0 0);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.head-right button:hover {
+   color: #7e00d2;
+}
+
+/* ==================== Hero Section ==================== */
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 150vh;
+    overflow: hidden;
+}
+
+.hero-blur-image {
+    position: absolute;
+    width: 100%;
+    top: -15%;
+}
+
+.hero-rings-image {
+    position: absolute;
+    height: 90%;
+    top: 90px;
+    opacity: 0.4;
+}
+
+.hero-icons-image {
+    width: 100%;
+    position: absolute;
+    top: 8%;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 7%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    color: white;
+    max-width: 1000px;
+    font-size: 50px;
+}
+
+.hero h2 {
+    position: absolute;
+    top: 26%;
+    font-size: 20px;
+    max-width: 800px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    color: gray;
+}
+
+.hero button {
+    position: absolute;
+    top: 34%;
+    border: none;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    width: 140px;
+    height: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    clip-path: polygon(0 1%, 86% 0, 100% 37%, 100% 80%, 100% 99%, 0 100%, 0% 80%, 0% 20%);
+}
+
+.hero button:hover {
+    opacity: 0.7;
+    color: purple;
+}
+
+/* ==================== Hero Image Box ==================== */
+.hero-image-box {
+    margin-top: 200px;
+    position: relative;
+    width: 700px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background: linear-gradient(to right, #00aaa7, #7f42a7, #6600c5, #1f2b9c, #2a46ff, #0099ff, #00aaa7);
+    background-size: 200%;
+    animation: animationGradient 2.5s linear infinite;
+}
+
+.hero-image-box .robot-box {
+    width: 90%;
+    height: 90%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 50px;
+}
+
+.hero-image-box .robot-box img {
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: hard-light;
+}
+
+.hero-image-box .robot-box .robot-header {
+    height: 30px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.hero-image-box .element1 {
+    position: absolute;
+    top: 25%;
+    right: -15%;
+    backdrop-filter: blur(10px);
+    width: 25%;
+    border-radius: 15px;
+}
+
+.hero-image-box .element1 img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.491);
+}
+
+.hero-image-box .element2 {
+    position: absolute;
+    top: 45%;
+    left: -15%;
+    backdrop-filter: blur(10px);
+    width: 25%;
+    border-radius: 15px;
+}
+
+.hero-image-box .element2 img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.491);
+}
+
+.parallex {
+    transition: transform 1s linear;
+}
+
+/* ==================== Sign In Page ==================== */
+.signin-page-box {
+    position: fixed;
+    top: 60%;               
+    left: 35%;
+    width: 30%;
+    height: 65vh; 
+    filter: blur(0.5px);
+    z-index: 1000;  
+    opacity: 0;        
+}
+
+.signin-page {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: rgba(14, 12, 21, 0.9);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.491);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.signin-page h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.signin-page input {
+    padding: 7.5px 30px;
+    background-color: lightgray;
+    border: none;
+    width: 60%;
+    outline: none;
+    height: 35px;
+    clip-path: polygon(20% 0%, 88% 1%, 100% 47%, 100% 60%, 89% 100%, 20% 100%, 0 100%, 0 0);
+    border-radius: 5px;
+    margin: 5%;
+}
+
+.signin-page button {
+    width: 50%;
+    height: 40px;
+    background-color: #7e00d2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 20px;
+    color: white;
+}
+
+.signin-page p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 40px;
+    background-color: gray;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 20px;
+    color: white;
+}
+
+.signin-page div{
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    font-size: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.signin-page div:hover {
+    opacity: 0.7;
+}
+
+
+/* ==================== Open Sign in Page ==================== */
+.openSignin{
+    animation: openSigninAnimation 0.7s forwards;
+}
+
+@keyframes openSigninAnimation {
+to{
+    filter: blur(0);
+    opacity: 1;
+    top: 30%;
+}
+}
+  /* from {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  } */
+
+  /*======= CLOSE SIGNIN PAGE ==========*/
+.closeSignin{
+    animation: closeSigninAnimation 0.7s forwards;
+}
+
+@keyframes closeSigninAnimation{
+    from{
+    filter: blur(0);
+    opacity: 1;
+    top: 30%;
+    }
+    to{
+        filter: blur(10px);
+        opacity: 0;
+        top: 60%;
+    }
+}
+
+/* COMPANIES SECTION*/
+
+h4{
+    position: absolute;
+    bottom: 12%;
+    color: gray;
+}
+
+.companies-list{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 3%;
+    width: 100%;
+}
+
+.companies-list .company{
+    display: flex;
+    align-items: center;
+}
+
+.companies-list .company img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.companies-list .company p {
+    color: gray;
+    font-size: 30px;
+}
+
+
+
+/* ==================== MEDIA QUERIES ==================== */
+
+/* Large tablets / small desktops */
+@media screen and (max-width: 1200px) {
+  .hero h1 {
+    font-size: 40px;
+    max-width: 90%;
+  }
+
+  .hero h2 {
+    font-size: 18px;
+    max-width: 90%;
+  }
+
+  .hero-image-box {
+    width: 80%;
+    height: auto;
+  }
+}
+
+/* Tablets */
+@media screen and (max-width: 900px) {
+  header ul {
+    display: none; /* Hide nav for now, later you can add hamburger menu */
+  }
+
+  .head-left h1 {
+    font-size: 20px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero h2 {
+    font-size: 16px;
+  }
+
+  .hero button {
+    width: 120px;
+    height: 45px;
+    font-size: 14px;
+  }
+
+  .hero-image-box {
+    width: 90%;
+    height: auto;
+  }
+
+  .signin-page-box {
+    width: 80%;
+    height: auto;
+    margin-left: -25%;
+  }
+
+  .companies-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+/* Mobile Phones */
+@media screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .head-left img {
+    height: 25px;
+  }
+  .signinButton{
+    top: 20px;
+    
+  }
+
+  .hero {
+    flex-direction: column;
+    height: auto;
+    padding: 5px;
+  }
+
+  .hero h1 {
+    font-size: 20px;
+    top: 23%;
+  }
+
+  .hero h2 {
+    font-size: 14px;
+    top: 35%;
+    height: 15px;
+  }
+
+  .hero button {
+    top: 46%;
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .hero-image-box {
+    margin-top: 290px;
+    width: 95%;
+    height: auto;
+  }
+
+  .hero-image-box .element1,
+  .hero-image-box .element2 {
+    display: none; /* Hide extra elements on small screens */
+  }
+
+  .signin-page-box {
+    width: 75%;
+    height: auto;
+    left: 75%;
+    transform: translateX(-50%);
+  }
+
+  .signin-page h1 {
+    font-size: 28px;
+  }
+
+  .signin-page input {
+    width: 80%;
+  }
+
+  .signin-page button,
+  .signin-page p {
+    width: 70%;
+    font-size: 16px;
+  }
+
+  h4 {
+    position: static;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .companies-list {
+    position: static;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .companies-list .company p {
+    font-size: 16px;
+  }
+}
